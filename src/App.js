@@ -12,7 +12,9 @@ class LinkList extends Component {
   render() {
     return (
       links.map((link) => (
-        <p><a href={link.url} target="_blank">{link.title}</a>
+        <p>
+        {new Date(link.date * 1000).toLocaleString('pl-PL')}
+        <a href={link.url} target="_blank">{link.title}</a>
           <TagList tags={link.tags} />
         </p>
       ))
