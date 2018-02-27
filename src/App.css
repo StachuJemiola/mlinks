@@ -1,5 +1,27 @@
-.tag-list {
-  
+a {
+  text-decoration-skip-ink: none;
+}
+
+.link-box {
+  border: 1px solid gray;
+  margin: 50px;
+  height: 70px;
+}
+
+.link-box a {
+  display: block;
+  margin-top: 10px;
+  font-family: Verdana;
+}
+
+.link-date {
+  font: 8pt Verdana;
+  color: navy;
+  background-color: aliceblue;
+  width: 200px;
+  line-height: 70px;
+  float: left;
+  height: 70px;
 }
 
 .tag-name {
