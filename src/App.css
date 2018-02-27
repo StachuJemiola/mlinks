@@ -1,3 +1,14 @@
+.tag-list {
+  
+}
+
+.tag-name {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 4px;
+  margin: 10px;
+}
+
 .App {
   text-align: center;
 }

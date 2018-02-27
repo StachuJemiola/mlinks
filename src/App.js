@@ -1,6 +1,24 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import links from './links.json';
+
+const TagList = ({tags}) => {
+  const tagDivs = tags.map((tag) => <div class="tag-name">{tag}</div>);
+  return <div class="tag-list">{tagDivs}</div>
+}
+
+class LinkList extends Component {
+  render() {
+    return (
+      links.map((link) => (
+        <p><a href={link.url} target="_blank">{link.title}</a>
+          <TagList tags={link.tags} />
+        </p>
+      ))
+    );
+  }
+}
 
 class App extends Component {
   render() {
@@ -10,9 +28,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <LinkList />
       </div>
     );
   }
