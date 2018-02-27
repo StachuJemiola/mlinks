@@ -34,7 +34,7 @@ class LinkList extends Component {
 class App extends Component {
   constructor() {
     super();
-    this.state = {links: links.sort((e1, e2) => e1.date - e2.date)};
+    this.state = {links: links.sort((e1, e2) => e2.date - e1.date)};
   }
   tagFilter(tag) {
     if (tag) {
