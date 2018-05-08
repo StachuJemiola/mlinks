@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import TagList from './TagList';
 
 class LinkList extends Component {
@@ -14,5 +15,8 @@ class LinkList extends Component {
     );
   }
 }
+LinkList.propTypes = {
+  links: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default LinkList;
